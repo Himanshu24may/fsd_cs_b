@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Login Page for Weather Report</h2>
+    <form onsubmit="return validateForm()" action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required
+               pattern="^[a-zA-Z0-9]{4,12}$" title="Username must be 4-12 characters long, and can contain only letters and numbers.">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required
+               pattern=".{5,}" title="Password must be at least 6 characters long.">
+        <div style="display: flex; justify-content: space-between;">
+            <button type="submit" class="login-btn">Login</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </div>
+        
+        
+    </form>
+</div>
+
+<script src="index.js">
+   
+</script>
+
+</body>
+</html>
